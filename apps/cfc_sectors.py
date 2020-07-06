@@ -50,7 +50,7 @@ def app_layout():
     )
 
 
-def generate_table(dataframe, max_rows=10):
+def generate_table(_dataframe, _max_rows=10):
     data = pd.read_excel('data/2018/economic-aggregates/S1.8.xlsx', header = None)
     df = data[6:]
     df.columns = df.iloc[0].fillna(value=pd.Series(range(100)))
@@ -67,7 +67,7 @@ def generate_table(dataframe, max_rows=10):
 layout = app_layout()
 
 
-def filter(year, category, rows, labels, remove=False):
+def filter(year, _category, rows, labels, remove=False):
     cu_index, co_index = [index for index in years.transpose().index if years[index].iloc[0] == year]
 
     filtered = rows[0:-1] if remove else rows

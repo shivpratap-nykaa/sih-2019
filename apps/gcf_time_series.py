@@ -21,7 +21,7 @@ labelIds = main_sections
 print(labelIds[1])
 
 
-def generate_table(dataframe, max_rows=10):
+def generate_table(_dataframe, _max_rows=10):
     data = pd.read_excel('data/2018/economic-aggregates/S1.10.xlsx', header = None)
     df = data[6:]
     df.columns = df.iloc[0].fillna(value=pd.Series(range(100)))

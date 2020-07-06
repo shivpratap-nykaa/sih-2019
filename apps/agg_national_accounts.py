@@ -52,7 +52,7 @@ def app_layout():
     )
 
 
-def generate_table(dataframe, max_rows=10):
+def generate_table(_dataframe, _max_rows=10):
     data = pd.read_excel(filename, header = None)
     df = data[6:-1]
     df.columns = df.iloc[0].fillna(value=pd.Series(range(100)))
