@@ -24,7 +24,7 @@ from apps import (
 from apps.admin import requires_auth
 
 UPLOAD_FOLDER = "data/uploads"
-ALLOWED_EXTENSIONS = set(["xlsx"])
+ALLOWED_EXTENSIONS = {"xlsx"}
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 
 server.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
