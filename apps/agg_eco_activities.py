@@ -17,7 +17,7 @@ filename = get_excel('aggregate_economic_activities', 'data/2018/aggregates-econ
 data = pd.read_excel(filename)
 
 years = data.iloc[2:3, 2:-2]
-year_set = [year for year in list(OrderedDict.fromkeys(years.values[0]).keys()) if type(year) == str]
+year_set = [year for year in list(OrderedDict.fromkeys(years.values[0]).keys()) if type(year) is str]
 process = data[5:]
 headers = data.iloc[4][2:-2]
 header_set = list(OrderedDict.fromkeys(headers.values).keys())

@@ -14,7 +14,7 @@ filename = get_excel('household', 'data/2018/households/S5.2.xlsx')
 
 data = pd.read_excel(filename)
 years = data.iloc[3:4, 2:-2]
-year_set = [year for year in list(OrderedDict.fromkeys(years.values[0]).keys()) if type(year) == str]
+year_set = [year for year in list(OrderedDict.fromkeys(years.values[0]).keys()) if type(year) is str]
 
 process = data[6:]
 headers = data.iloc[5][2:-2]
